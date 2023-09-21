@@ -20,19 +20,19 @@ export default () => {
         <div className="flex divide-x divide-slate-700 px-20 pt-12 text-slate-100">
           <section className=" flex w-1/2 flex-col space-y-8 px-10">
             <h1 className="text-center font-mono text-5xl font-semibold">
-              CONTACT
+              MES CONTACT
             </h1>
 
-            <p className="text-center text-sm font-normal">
+            {/* <p className="text-center text-sm font-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
               excepturi modi. Incidunt non quas corporis hic cupiditate aperiam
               laboriosam iste quia, adipisci soluta unde, perspiciatis nemo amet
               nesciunt illo nihil.
-            </p>
+            </p> */}
 
             <div className="mx-auto">
               <h2 className="text-center text-lg font-semibold">Email</h2>
-              <Link to="email:ibrahimbako@proton.me" className="text-center">
+              <Link to="mailto:ibrahimbako@proton.me" className="text-center">
                 ibrahimbako@proton.me
               </Link>
             </div>
@@ -44,12 +44,12 @@ export default () => {
               </Link>
             </div>
 
-            <div className="mx-auto">
+            {/* <div className="mx-auto">
               <h2 className="text-center text-lg font-medium">Localisation</h2>
               <Link to="" className="text-center">
                 Burkina Faso / Ouagadougou / Pissy
               </Link>
-            </div>
+            </div> */}
           </section>
 
           <section className="justify-space flex w-1/2 flex-col px-10">

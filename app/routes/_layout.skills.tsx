@@ -146,8 +146,8 @@ const ExperiancesStepps = () => {
             Pas d'expérience en entreprise
           </h3>
           <p className="pl-3 text-xs">
-            Je suis très actuellement à la recherche d'un stage. Contacter moi
-            si besoin.
+            Je suis actuellement à la recherche d'un stage et je suis ouvert a
+            toute proposition.
             <br />
             Contacter moi si vous avez des questions ?
           </p>

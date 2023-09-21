@@ -1,102 +1,25 @@
-import { useEffect, useState } from "react"
-import { Link, Outlet, useLoaderData, useLocation } from "@remix-run/react"
-
-import {
-  LinksFunction,
-  LoaderFunction,
-  LoaderFunctionArgs,
-  json,
-  redirect,
-} from "@remix-run/node"
+import { Link, Outlet, useLocation } from "@remix-run/react"
+import { type LinksFunction } from "@remix-run/node"
 import { AnimatePresence, motion } from "framer-motion"
 
-import image1 from "~/assets/img/img1.jpg"
-import image2 from "~/assets/img/img2.jpg"
-import image3 from "~/assets/img/img3.jpg"
-import image4 from "~/assets/img/img4.jpg"
+import bg_image from "~/assets/img/bg-img.jpg"
 
 import github from "~/assets/img/github.png"
-import youtube from "~/assets/img/youtube.png"
+// import youtube from "~/assets/img/youtube.png"
 import x from "~/assets/img/x.png"
 
-import { useBgImagePrefs } from "~/cookies.server"
-
-export const loader: LoaderFunction = async ({
-  request,
-  context,
-  params,
-}: LoaderFunctionArgs) => {
-  const cookieHeader = request.headers.get("Cookie")
-  const cookie = (await useBgImagePrefs.parse(cookieHeader)) || {}
-
-  if (!cookie.nbImage) {
-    cookie.nbImage = Math.floor(Math.random() * (5 - 1)) + 1
-
-    return redirect(request.url, {
-      headers: { "Set-Cookie": await useBgImagePrefs.serialize(cookie) },
-    })
-  }
-
-  return json({ nbImage: cookie.nbImage })
-}
-
 export const links: LinksFunction = () => {
-  return [
-    {
-      rel: "preload",
-      href: image1,
-      as: "image",
-    },
-    {
-      rel: "preload",
-      href: image2,
-      as: "image",
-    },
-    {
-      rel: "preload",
-      href: image3,
-      as: "image",
-    },
-    {
-      rel: "preload",
-      href: image4,
-      as: "image",
-    },
-  ]
+  return [{ rel: "preload", href: bg_image, as: "image" }]
 }
 
 export default () => {
   const location = useLocation()
 
-  const { nbImage } = useLoaderData<typeof loader>()
-
-  const [img, setImg] = useState<String>(image4)
-
-  useEffect(() => {
-    switch (nbImage) {
-      case 1:
-        setImg(image1)
-        break
-      case 2:
-        setImg(image2)
-        break
-      case 3:
-        setImg(image3)
-        break
-      case 4:
-        setImg(image4)
-        break
-      default:
-        setImg(image4)
-        break
-    }
-  }, [])
-
   return (
     <>
       <div
         className="h-screen w-screen  bg-cover bg-bottom"
-        style={{ backgroundImage: `url(${img})` }}
+        style={{ backgroundImage: `url(${bg_image})` }}
       >
         <div className="h-screen w-screen backdrop-brightness-[0.3]">
           <nav className=" fixed flex h-12 w-full justify-between bg-slate-500 bg-opacity-30 px-20 py-2 text-slate-100">
