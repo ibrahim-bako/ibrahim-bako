@@ -1,6 +1,8 @@
 import { Link, useLocation } from "@remix-run/react"
 import { motion } from "framer-motion"
 
+import ibrahim_bako_web_site from "~/assets/img/ibrahim-bako-web-site.png"
+
 export default () => {
   return (
     <>
@@ -24,18 +26,10 @@ export default () => {
 
           <section className=" flex flex-wrap justify-evenly ">
             <ProjectCard
-              name="Apple web site"
-              imageUrl="https://www.versionmuseum.com/images/websites/apple-website/apple-website%5E2017%5Ehomepage.png"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          repellendus sit laboriosam neque? Minima veniam quos vitae nemo non iure"
-              link="https://www.apple.com"
-            />
-            <ProjectCard
-              name="Apple web site"
-              imageUrl="https://www.versionmuseum.com/images/websites/apple-website/apple-website%5E2017%5Ehomepage.png"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          repellendus sit laboriosam neque? Minima veniam quos vitae nemo non iure"
-              link="https://www.apple.com"
+              name="Mon site cv personel"
+              imageUrl={ibrahim_bako_web_site}
+              description="Ce projet est un site CV personnel que j'ai construit pour moi. Il me presente moi, mes compétences et mes expérience en developpement."
+              link="https://ibrahim-bako.vercel.app"
             />
           </section>
         </div>

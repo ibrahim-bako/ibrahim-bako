@@ -70,7 +70,7 @@ export default () => {
 
   const { nbImage } = useLoaderData<typeof loader>()
 
-  const [img, setImg] = useState<String | null>(null)
+  const [img, setImg] = useState<String>(image4)
 
   useEffect(() => {
     switch (nbImage) {
@@ -86,9 +86,8 @@ export default () => {
       case 4:
         setImg(image4)
         break
-
       default:
-        setImg(null)
+        setImg(image4)
         break
     }
   }, [])
