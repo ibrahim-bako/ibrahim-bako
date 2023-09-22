@@ -34,20 +34,20 @@ export default () => {
                 THECHNOLOGIES
               </h1>
               <div className="mt-6 space-y-3">
-                <SkillLevel img={remix} name="Remix Run" level={60} />
+                <SkillLevel img={flutter} name="Flutter" level={60} />
                 <SkillLevel img={react} name="ReactJs" level={60} />
-                <SkillLevel img={flutter} name="Flutter" level={70} />
-                <SkillLevel img={django} name="Django" level={50} />
-                <SkillLevel img={directus} name="Directus" level={80} />
+                <SkillLevel img={django} name="Django" level={75} />
                 <SkillLevel
                   img={
                     "https://nodejs.dev/static/images/brand/hexagon/js-green.svg"
                   }
                   name="NodeJs"
-                  level={80}
+                  level={40}
                 />
-                <SkillLevel img={debian} name="Debian" level={80} />
-                <SkillLevel img={archlinux} name="ArchLinux" level={80} />
+                <SkillLevel img={remix} name="Remix Run" level={50} />
+                <SkillLevel img={directus} name="Directus" level={80} />
+                <SkillLevel img={debian} name="Debian" level={60} />
+                <SkillLevel img={archlinux} name="ArchLinux" level={60} />
               </div>
             </div>
             <div>
@@ -185,7 +185,7 @@ const SkillLevel = ({
           )}
           <p className="my-auto w-20 text-base font-semibold">{name}</p>
         </div>
-        <div className="my-auto h-2 w-40 rounded-lg bg-gray-800 bg-opacity-60">
+        <div className="my-auto h-2 w-52 rounded-lg bg-gray-800 bg-opacity-60">
           <div
             className="h-full rounded-lg bg-slate-500 bg-opacity-80 transition-all delay-300 duration-1000 ease-out "
             style={{ width: `${_level}%` }}
