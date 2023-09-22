@@ -16,26 +16,20 @@ export default () => {
         initial="initial"
         exit="exit"
         transition={{ duration: 0.5 }}
-        className="w-full h-full md:col-span-3 sm:overflow-auto relative z-0"
+        className="relative z-0 h-full w-full md:col-span-3 sm:overflow-auto"
       >
-        <section className=" px-8 pt-8 my-auto ml-36">
-          <div className=" backdrop-blur-[2px] bg-gray-600 bg-opacity-0 w-min rounded-lg p-6 font-mono text-slate-100">
+        <section className=" my-auto ml-36 px-8 pt-8">
+          <div className=" w-min rounded-lg bg-gray-600 bg-opacity-0 p-6 font-mono text-slate-100 backdrop-blur-[2px]">
             <p className="text-5xl font-normal">BAKO</p>
             <p className="text-7xl font-bold tracking-wide">IBRAHIM</p>
             <p className="text-xl font-normal tracking-widest">
               Developper web et mobile
             </p>
-            <div className="flex space-x-4 mt-10">
-              <Link
-                to="/about"
-                className="w-max px-4 py-1 border border-white bg-slate-900 hover:bg-opacity-50 bg-opacity-20 transition-colors text-lg font-medium  rounded-xl "
-              >
+            <div className="mt-10 flex space-x-4">
+              <Link to="/about" className="outlined-button">
                 A propos de moi
               </Link>
-              <Link
-                to="/portfolio"
-                className="w-max px-4 py-1 border border-white bg-slate-900 hover:bg-opacity-50 bg-opacity-20 transition-colors text-lg font-medium  rounded-xl "
-              >
+              <Link to="/portfolio" className="outlined-button">
                 Mon portfolio
               </Link>
             </div>

@@ -31,15 +31,23 @@ export default () => {
             </p> */}
 
             <div className="mx-auto">
-              <h2 className="text-center text-lg font-semibold">Email</h2>
-              <Link to="mailto:ibrahimbako@proton.me" className="text-center">
+              <h2 className="text-center text-xl font-semibold">Email</h2>
+              <Link
+                to="mailto:ibrahimbako@proton.me"
+                target="_blank"
+                className="link text-center"
+              >
                 ibrahimbako@proton.me
               </Link>
             </div>
 
             <div className="mx-auto">
-              <h2 className="text-center text-lg font-medium">Téléphone</h2>
-              <Link to="tel:+22654377601" className="text-center">
+              <h2 className="text-center text-xl font-medium">Téléphone</h2>
+              <Link
+                to="tel:+22654377601"
+                target="_blank"
+                className="link text-center"
+              >
                 +226 54 37 76 01
               </Link>
             </div>
@@ -64,7 +72,7 @@ export default () => {
               <div className="mt-2">
                 <input
                   type="submit"
-                  className="outline-button"
+                  className="outlined-button"
                   value="Envoyer"
                 />
               </div>

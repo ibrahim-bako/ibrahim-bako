@@ -21,7 +21,25 @@ export default () => {
         className="h-screen w-screen  bg-cover bg-bottom"
         style={{ backgroundImage: `url(${bg_image})` }}
       >
-        <div className="h-screen w-screen backdrop-brightness-[0.3]">
+        <div className=" mx-auto my-auto hidden h-screen w-screen p-8 backdrop-brightness-[0.3] md:block">
+          <h1 className="text-lg font-medium text-slate-200">
+            Désolé mon site n'est pas encore responsif et c'est pas très jilie a
+            voir. Donc déso !
+          </h1>
+          <br />
+          <h1 className="text-lg font-medium text-slate-200">
+            Mais ne vous inquieter pas je travaille dessus. En attendant je vous
+            propose d'aller sur votre PC ou d'activer le mode PC sur votre
+            navigateur mobile.
+          </h1>
+          <br />
+          <h1 className="text-lg   font-medium text-slate-200">
+            Merci pour l'intérêt que vous me porter et au plaisir de prendre
+            contact avec vous.
+          </h1>
+        </div>
+
+        <div className="h-screen w-screen backdrop-brightness-[0.3] md:hidden">
           <nav className=" fixed flex h-12 w-full justify-between bg-slate-500 bg-opacity-30 px-20 py-2 text-slate-100">
             <h1 className="text-2xl font-bold">Ibrahim Bako</h1>
             <div className="flex justify-center space-x-4 md:invisible">

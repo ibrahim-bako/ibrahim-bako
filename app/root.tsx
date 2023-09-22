@@ -1,5 +1,4 @@
 // import { cssBundleHref } from "@remix-run/css-bundle"
-import { Analytics } from "@vercel/analytics/react"
 import type { LinksFunction } from "@remix-run/node"
 import {
   Links,
@@ -27,7 +26,6 @@ export default function App() {
       </head>
       <body>
         <Outlet />
-        <Analytics />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

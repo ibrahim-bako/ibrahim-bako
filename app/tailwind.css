@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .outlined-button {
+        @apply w-max px-4 py-1 border border-slate-400 bg-slate-900 hover:bg-opacity-50 bg-opacity-20 transition-colors text-lg font-semibold  rounded-xl;
+    }
+
+    .link {
+        @apply no-underline hover:underline underline-offset-2 text-base font-semibold text-blue-400 text-opacity-95 ;
+    }
+}
