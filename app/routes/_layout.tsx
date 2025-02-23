@@ -3,7 +3,6 @@ import { type LinksFunction } from "@remix-run/node"
 import { AnimatePresence, motion } from "framer-motion"
 
 import bg_image from "~/assets/img/bg-img.jpg"
-
 import github from "~/assets/img/github.png"
 // import youtube from "~/assets/img/youtube.png"
 import x from "~/assets/img/x.png"
@@ -23,8 +22,8 @@ export default () => {
       >
         <div className=" mx-auto my-auto hidden h-screen w-screen p-8 backdrop-brightness-[0.3] md:block">
           <h1 className="text-lg font-medium text-slate-200">
-            Désolé mon site n'est pas encore responsif et c'est pas très jilie a
-            voir. Donc déso !
+            Désolé mon site n'est pas encore responsif et c'est pas très joli à
+            voir. Donc déso 😅!
           </h1>
           <br />
           <h1 className="text-lg font-medium text-slate-200">
@@ -35,7 +34,7 @@ export default () => {
           <br />
           <h1 className="text-lg   font-medium text-slate-200">
             Merci pour l'intérêt que vous me porter et au plaisir de prendre
-            contact avec vous.
+            contact avec vous 🙏🏾.
           </h1>
         </div>
 
@@ -71,9 +70,9 @@ export default () => {
             </div>
           </nav>
           <div className="flex h-full pt-12">
-            <section className="flex h-full w-14 flex-col justify-around bg-black bg-opacity-80 px-2 py-20">
+            <section className="flex h-full w-14 flex-col justify-around bg-gray-800 bg-opacity-80 px-2 py-20">
               <Link
-                to="https://github.com/ibrahimbako"
+                to="https://github.com/ibrahim-bako"
                 target="_blank"
                 className="mx-auto rounded-lg bg-opacity-20 p-1.5 text-slate-300 transition-all hover:bg-slate-900 "
               >
@@ -105,7 +104,7 @@ export default () => {
                 />
               </Link>
             </section>
-            <section className="h-full w-full">
+            <section className="h-full w-full overflow-auto">
               <AnimatePresence mode="wait">
                 <Outlet />
               </AnimatePresence>
@@ -133,6 +132,7 @@ const NavLink = ({
           to={to}
           className={`text-base font-semibold hover:text-blue-400 hover:text-opacity-100 
           ${active ? " text-blue-400 text-opacity-100" : ""} `}
+          aria-label={label}
         >
           {label}
         </Link>
