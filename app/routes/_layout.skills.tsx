@@ -36,14 +36,14 @@ export default () => {
                 THECHNOLOGIES
               </h1>
               <div className="mt-6 space-y-3">
-                <SkillLevel img={flutter} name="Flutter" level={60} />
-                <SkillLevel img={react} name="ReactJs" level={60} />
+                <SkillLevel img={flutter} name="Flutter" level={75} />
+                <SkillLevel img={react} name="ReactJs" level={75} />
                 <SkillLevel img={nodejs} name="NodeJs" level={80} />
                 <SkillLevel img={remix} name="Remix Run" level={60} />
                 <SkillLevel
                   img={gcp}
                   name="Google Cloud Plateform"
-                  level={50}
+                  level={60}
                 />
                 <SkillLevel img={docker} name="Docker" level={80} />
                 <SkillLevel img={firebase} name="Firebase" level={50} />
